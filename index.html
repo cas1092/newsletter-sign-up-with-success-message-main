@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="StyleSheet.css" />
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+  <script defer src="JavaScript.js"></script>
+</head>
+<body>
+    <main>
+        <div class="card">
+            <div class="container_1" id="container_1">
+                <picture>
+                    <source media="(min-width:650px)" srcset="assets/images/illustration-sign-up-desktop.svg" />
+                    <img src="assets/images/illustration-sign-up-mobile.svg" />
+                </picture>
+                <div class="content">
+                    <h1>Stay updated!</h1>
+                    <p>Join 60,000+ product managers receiving monthly updates on:</p>
+                    <ul>
+                        <li>Product discovery and building what matters</li>
+                        <li>Measuring to ensure updates are a success</li>
+                        <li>And much more!</li>
+                    </ul>
+                    <form class="form" id="form" method="get">
+                        <label class="label">
+                            Email address
+                            <span class="error hidden" id="error">
+                                Valid email required
+                            </span>
+                            <input id="email" name="email" placeholder="email@company.com" />
+                            <input class="button " id="button" value="Subscribe to monthly newsletter" type="submit" />
+                        </label>
+
+                    </form>
+                </div>
+            </div>
+            <div class="container_2 hidden" id="container_2">
+                <div class="content">
+                    <img src="assets/images/icon-success.svg" />
+
+                    <h1>Thanks for subscribing!</h1>
+                    <p>
+                        A confirmation email has been sent to <strong id="submitedEmail"></strong>.  <br />
+                        Please open it and click the button inside to confirm your subscription.
+                    </p>
+                    <input type="submit" value="Dismiss message" class="button" id="dismiss_btn" />
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="attribution">
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+            Coded by <a href="#">Your Name Here</a>.
+        </div>
+    </footer>
+
+ 
+  
+  
+</body>
+</html>
