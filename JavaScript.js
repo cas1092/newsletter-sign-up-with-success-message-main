@@ -3,6 +3,8 @@ const submitedEmail = document.querySelector("#submitedEmail");
 const card1 = document.querySelector("#container_1");
 const card2 = document.querySelector("#container_2");
 const dismiss = document.getElementById("dismiss_btn");
+const error = document.getElementById("required_email");
+const input = document.querySelector("#email");
 
 
 
@@ -19,10 +21,10 @@ function switchScreen() {
 }
 
 function showerrors() {
-    const error = document.getElementById("msg_error");
-    const input = document.querySelector("#email");
-    error.classList.remove("hidden");
-    input.classList.add("error_style");
+    
+    input.style.color = "var(--Tomato)";
+    input.style.borderColor = "var(--Tomato)";
+    error.classList.toggle("hidden");
 
 
 }
@@ -37,22 +39,19 @@ function isValidEntry(str) {
 form.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    const email = form.querySelector("#email");
+    
     const valid = isValidEntry(email.value);
     if (!valid) {
         return showerrors();
     }
     else {
-        updateEmail(email.value);
+        updateEmail(input.value);
         switchScreen();
     }
-    
+
 
 });
 
 dismiss.addEventListener("click", () => {
     switchScreen();
 })
-
-
-
